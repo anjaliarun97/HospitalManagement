@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Doctors{% endblock %}
+
+{% block content %}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/docs.css' %}">
+<h1 class="text-center my-2">Our Doctors</h1>
+    <hr>
+  <div class="container text-center" style="background-image:linear-gradient(to top,rgb(0, 0, 0),rgb(0, 146, 243));border-radius: 10px;box-shadow: 10px 10px 30px black;margin-bottom: 120px;">
+    
+      {%for d in doctors%}
+    
+    <div class="card mx-3 my-3" style="width: 18rem; display: inline-block;background-color: rgb(181, 218, 228);">
+      <img src="{{d.doc_image.url}}" class="card-img-top" alt="..." height="250px">
+      <div class="card-body">
+        <h5 class="card-title">Dr. {{d.doc_name}}</h5>
+        <p class="card-text">{{d.doc_spec}}</p>
+        <h6>{{d.dep_name}} Department</h6>
+      </div>
+    </div>
+    
+     {%endfor%}
+  </div>
+{% endblock %}

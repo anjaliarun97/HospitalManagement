@@ -1,0 +1,17 @@
+body{
+    background-image: url(../images/hospital.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+#dept{
+    background-color: rgb(0, 123, 145);
+}
+h1{
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#dept h2{
+    text-shadow: 2px 2px black;
+}

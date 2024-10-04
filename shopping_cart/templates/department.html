@@ -1,0 +1,16 @@
+{%extends "base.html" %}
+{%block title%}Departments{%endblock%}
+
+
+{%block content%}
+{%load static%}
+<link rel="stylesheet" href="{% static 'css/dept.css' %}">
+<h1 class="text-center">Our Departments</h1>
+<hr>
+{%for d in dept %}
+<div class="mx-auto w-50 text-center text-white p-3 my-5 border border-white rounded" id="dept">
+    <h2>{{d.dep_name}}</h2>
+    <p>{{d.dep_description}}</p>
+</div>
+{%endfor%}
+{%endblock%}
